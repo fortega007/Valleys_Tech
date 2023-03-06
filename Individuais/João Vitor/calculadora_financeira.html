@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aula 04 - EXERCICIO 12!</title>
+
+</head>
+
+<body>
+
+    <header><h1>EXERCICIO 12</h1></header>
+
+    Qual seu lucro total com sua produção?
+    <input id="input_lucro" placeholder="Qual seu lucro total com sua produção?">
+    Qual seu gasto total com sua produção?
+    <input id="input_gasto" placeholder="Qual seu gasto total com sua produção?">
+
+
+    
+ 
+    <div id="div_exemplo" class="inputs">
+     
+        
+        
+    </div>
+
+
+    <div class="botao">
+        <button onclick="calcularFinancas()">Calcular Lucro!</button>
+        <button onclick="calcularFinancasComDesconto()">Calcular lucro com a nossa solução!</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function calcularFinancas() {
+    var lucro = Number(input_lucro.value);
+    var gasto = Number(input_gasto.value);
+    var total = lucro - gasto;
+
+    div_exemplo.innerHTML = `<p>Seu lucro será de R$${total} sem a nossa solução...</p>`;
+
+    div_exemplo.innerHTML += `<br> <style>
+        p {
+            color: red;
+        }
+        </style>`
+
+
+}
+
+function calcularFinancasComDesconto() {
+    var lucro = Number(input_lucro.value);
+    var gasto = Number(input_gasto.value);
+    var total = lucro - gasto;
+    var totalComDesconto = total - (total * 0.2);
+
+    div_exemplo.innerHTML = `<p>Seu lucro será de R$${totalComDesconto} usando nossa solução!</p>`;
+
+    div_exemplo.innerHTML += `<br> <style>
+        p {
+            color: blue;
+        }
+        </style>`
+
+}
+</script>
