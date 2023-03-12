@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora financeira</h1>
+
+    Quantos hectares sua plantação possui: <input id="input_hectares"> <br>
+    Ganho por hectar: <input id="input_ganhoHectar"> <br>
+    Perda por problemas de temperatura/umidade em % <input id="input_perda"> <br>
+
+    <h3>Veja quanto de lucro você terá com a nossa solução</h3>
+
+    <button onclick="lucro()">Ver lucro</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function lucro() {
+        var hectares = Number(input_hectares.value);
+        var ganhoHectares = Number(input_ganhoHectar.value);
+        var perda = Number(input_perda.value);
+        var totalGanho = ganhoHectares * hectares;
+        var perdaTotal = totalGanho * (perda/100);
+        var liquido = totalGanho - perdaTotal;
+
+        var solucao = 40;
+        var reducaoPerda = perda * (solucao/100);
+        var lucro = totalGanho - reducaoPerda;
+
+        div_resultado.innerHTML = `<br><p style="color: red; font-size: 20px;">Sem utilizar a nossa solução vc teria R$${perda} de perda, tendo um lucro total de R$${liquido} </p>
+        <p style="color: green; font-size: 20px;"> Utilizando a nossa solução você terá uma redução de ${solucao}% das perdas, gerando um lucro de R$${lucro} nas suas produções</p>`;
+
+    }
+
+
+
+</script>
