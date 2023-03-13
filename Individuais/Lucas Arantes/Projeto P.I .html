@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>
+    Entenda a <b style="color:chartreuse">VANTAGEM</b> de nosso <B style="color: blueviolet;">PRODUTO !!!!</B> 
+    </H1>
+
+    <br>
+
+<h3>Complete as informações a baixo:</h3>
+
+<h5>Previsão de faturamento próxima safra:</h5>
+<input id="input_previsao">
+
+<h5>Tipo de uva:</h5>
+<input type="input_tipo_uva">
+
+<Br>
+    <Br>
+
+<button onclick="exibiir()">Ver Solução !</button>
+<p id="p_exibicao"></p>
+
+<p id="p_exibicao2"></p>
+
+<p id="p_exibicao3"></p>
+
+<p id="p_exibicao4"></p>
+</body>
+</html>
+<script>
+
+function exibiir() {
+var prev = Number(input_previsao.value)
+var perca = prev * 0.20
+
+p_exibicao.innerHTML = 
+`Através de varios estudos profundos sobre a plantação e cultivo de varios tipos de uvas com finalidade aos vinhais,
+nossos clientes chegam a marca de 20% de perca ou mais, no período de plantação pela falta de monitoramento na temperatura e umidade.
+
+Sua previsão de faturamento e por volta de $${prev} imagine que $${perca} seja simplesmente rasgado,
+sabendo que essa quantida poderia estar fazendo parte da sua porcentagem de lucro!`
+
+p_exibicao2.innerHTML = 
+`Por esse motivos criamos uma solução na qual você tem o monitoramento total da temperatura e umidade de sua plantação 24h por dia.
+Na qual tera um sistema didático e personalizado para sua necessidade, para que com isso, sua porcentagem de lucro tenha um aumento esponencial.
+`
+
+p_exibicao3.innerHTML = 
+`Preparamos um exemplo com as informaçoes que nos forneceu:
+`
+
+p_exibicao4.innerHTML = 
+`Sua previsão de faturamento e por volta de $${prev} imagine que $${perca} seja simplesmente rasgado,
+sabendo que essa quantida poderia estar fazendo parte da sua porcentagem de lucro!`
+
+}
+
+</script>

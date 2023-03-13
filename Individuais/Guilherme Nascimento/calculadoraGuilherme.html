@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <h1>Calculadora Financeira</h1>
+</head>
+<body>
+    Insira a quantidade de lucro que você obteve em sua última safra:
+    <input id="input_lucro"><br><br>
+    <button onclick="calculoLucro()">
+        Calcular lucro
+    </button>
+<div id="div_calculo"></div>
+</body>
+</html>
+<script>
+    function calculoLucro() {
+        var lucro = Number(input_lucro.value)
+        var perda = lucro * (20/100)
+        var prejuizo = lucro - perda
+
+        div_calculo.innerHTML=
+        `<br>Seu lucro na última safra foi de R$ ${lucro}. <br>Estimamos que devido a questões climáticas e umidade, você pode ter um prejuizo de até 20% que resultaria em R$ ${perda}. <br>Com nosso produto você estaria ganhando aproximadamente R$ ${lucro + perda}.`
+
+    }   
+</script>
